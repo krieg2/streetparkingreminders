@@ -3,7 +3,7 @@
   <head>
 	  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Street Parking Reminders - Contact</title>
+    <title>Street Parking Reminders - Support</title>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -31,7 +31,7 @@
           <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item active"><a class="nav-link" href="contact.html">Support</a></li>
               <li class="nav-item"><a class="nav-link" href="privacy_policy.html">Privacy Policy</a></li>
             </ul>
           </div>
@@ -41,8 +41,42 @@
 
 	  <div class="container">
 		  <div class="row">
-            <div class="col">
-            </div>
+        <div class="col">
+          <!-- Form -->
+          <div id="formContainer">
+            <form method="POST" action="https://formspree.io/streetparkingreminders@gmail.com" id="contactForm" class="border border-primary">
+
+              <div class="form-group">
+              <input type="hidden" name="_format" value="plain" />
+              <input type="hidden" name="_subject" value="Street Parking Reminders Contact Form Submission" />
+              <input type="hidden" name="_next" value="http://www.streetparkingreminders.com/completed.html" />
+              <input type="text" name="_gotcha" style="display:none" />
+              </div>
+              <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control form-control-sm" type="text" name="name" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+              <label for="email">Email</label>
+              <input class="form-control form-control-sm" type="email" name="email" placeholder="Your email" required />
+              </div>
+              <div class="form-group">
+              <label for="type">Type</label>
+              <select class="form-control form-control-sm" name="type" required>
+                <option>Comment</option>
+                <option>Help request</option>
+                <option>Report a bug</option>
+              </select>
+              </div>
+              <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control form-control-sm" placeholder="Your message..." rows="10" name="message" required ></textarea>
+              </div>
+              <input id="submitButton" class="btn btn-outline-primary" type="submit" value="Send" />
+
+            </form>
+          </div>
+        </div>
 		  </div> <!-- row -->
 	  </div> <!-- container -->
 
