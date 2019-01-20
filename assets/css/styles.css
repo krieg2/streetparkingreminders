@@ -78,6 +78,12 @@ body {
   margin-top: 25px;
 }
 
+.screenshot {
+  margin: 8px;
+  width: 100px;
+  height: 200px;
+}
+
 .top {
   border-bottom: 1px solid #d2d4d8; /* grey */
   margin-bottom: 25px;
